@@ -1,0 +1,127 @@
+/* src/components/KRPage.css */
+
+/* Estilos gerais da página de KR */
+.kr-page {
+    background-color: white;
+    min-height: 100vh;
+    padding-top: 60px; /* Compensa a altura da barra superior fixa */
+  }
+  
+  /* Barra superior */
+  .top-bar {
+    background-color: #004D1A;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  /* Conteúdo principal */
+  .kr-content {
+    padding: 20px;
+  }
+  
+  /* Informação do objetivo */
+  .objective-info {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .divider {
+    border: none;
+    height: 2px;
+    background-color: #004D1A;
+    margin: 0;
+  }
+  
+  .objective-title {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    color: #004D1A;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  /* Seção dos cards de KR */
+  .kr-cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Primeira fileira */
+  .kr-first-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  
+  .kr-first-row > * {
+    flex: 1 1 calc(20% - 20px); /* 5 itens por linha */
+    max-width: calc(20% - 20px);
+  }
+  
+  /* Linhas subsequentes */
+  .kr-other-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .kr-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  
+  /* Ajusta a largura dos itens nas kr-rows */
+  .kr-row > * {
+    flex: 1 1 calc(20% - 20px); /* 5 itens por linha */
+    max-width: calc(20% - 20px);
+  }
+  
+  /* Placeholder para ocupar o espaço abaixo do card de adicionar KR */
+  .kr-placeholder {
+    flex: 1 1 calc(20% - 20px);
+    max-width: calc(20% - 20px);
+    visibility: hidden; /* Torna o placeholder invisível */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1200px) {
+    .kr-first-row > *,
+    .kr-row > * {
+      flex: 1 1 calc(33.33% - 20px); /* 3 itens por linha */
+      max-width: calc(33.33% - 20px);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .kr-first-row > *,
+    .kr-row > * {
+      flex: 1 1 calc(50% - 20px); /* 2 itens por linha */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .kr-first-row > *,
+    .kr-row > * {
+      flex: 1 1 100%; /* 1 item por linha */
+      max-width: 100%;
+    }
+  }
+  

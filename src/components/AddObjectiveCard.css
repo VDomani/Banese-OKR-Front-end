@@ -1,0 +1,28 @@
+.add-objective-card {
+    background-color: #004D1A;
+    width: 280px;
+    height: 260px;
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+  }
+
+  .add-objective-card:hover {
+    background-color: #006837;
+    cursor: pointer;
+  }  
+  
+  .add-icon {
+    font-size: 70px;
+    margin-bottom: 5px;
+  }
+  
+  .add-text {
+    font-size: 20px;
+  }
+  

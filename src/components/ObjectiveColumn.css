@@ -1,0 +1,65 @@
+/* src/components/ObjectiveColumn.css */
+
+.objective-column {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cards-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-objective-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.objective-cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  align-items: flex-start;
+  scrollbar-width: none; /* Para Firefox */
+  flex: 1;
+}
+
+.objective-cards-container::-webkit-scrollbar {
+  display: none; /* Para Chrome, Safari e Opera */
+}
+
+/* Estilos dos botões de rolagem permanecem os mesmos */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* Remove o fundo */
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0; /* Remove o padding */
+  width: 40px; /* Tamanho adequado para interação */
+  height: 40px;
+}
+
+.scroll-button svg {
+  color: #004D1A; /* Cor verde */
+  font-size: 28px; /* Aumenta o tamanho das setas */
+}
+
+.scroll-button:hover svg {
+  color: #004D1A; /* Mantém a mesma cor ao passar o mouse */
+}
+
+.scroll-button.left {
+  left: -25px; /* Ajuste conforme necessário */
+}
+
+.scroll-button.right {
+  right: -40px; /* Ajuste conforme necessário */
+}
+
