@@ -1,5 +1,3 @@
-// src/components/ObjectiveCard.js
-
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './ObjectiveCard.css';
@@ -14,7 +12,6 @@ function ObjectiveCard({ id, tipo, titulo, descricao, onEdit, onDelete }) {
 
   const navigate = useNavigate();
 
-  // Função para editar o objetivo
   const handleEditObjective = () => {
     const objetivoEditado = {
       id,
@@ -25,19 +22,16 @@ function ObjectiveCard({ id, tipo, titulo, descricao, onEdit, onDelete }) {
     setShowModal(false);
   };
 
-  // Função para abrir o modal de confirmação de remoção
   const confirmDeleteObjective = () => {
     setShowConfirmModal(true);
   };
 
-  // Função para confirmar a remoção
   const handleConfirmDelete = () => {
     onDelete(id);
     setShowModal(false);
     setShowConfirmModal(false);
   };
 
-  // Função para navegar até a página de KRs
   const handleCardClick = () => {
     navigate(`/objetivos/${id}`, { state: { id, tipo, titulo } });
   };
@@ -48,7 +42,7 @@ function ObjectiveCard({ id, tipo, titulo, descricao, onEdit, onDelete }) {
         <div
           className="edit-icon"
           onClick={(e) => {
-            e.stopPropagation(); // Impede a propagação do evento de clique para o card
+            e.stopPropagation(); 
             setShowModal(true);
           }}
         >
@@ -58,7 +52,6 @@ function ObjectiveCard({ id, tipo, titulo, descricao, onEdit, onDelete }) {
         <div className="objective-description">{novaDescricao}</div>
       </div>
 
-      {/* Modal de Edição */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Editar Objetivo {tipo}</Modal.Title>
@@ -71,7 +64,7 @@ function ObjectiveCard({ id, tipo, titulo, descricao, onEdit, onDelete }) {
                 type="text"
                 value={novoTitulo}
                 onChange={(e) => setNovoTitulo(e.target.value)}
-                maxLength={15} // Limita o título a 15 caracteres
+                maxLength={15} 
               />
               <Form.Text className="text-muted">
                 {`${novoTitulo.length}/15 caracteres`}
@@ -101,7 +94,6 @@ function ObjectiveCard({ id, tipo, titulo, descricao, onEdit, onDelete }) {
         </Modal.Footer>
       </Modal>
 
-      {/* Modal de Confirmação de Remoção */}
       <Modal
         show={showConfirmModal}
         onHide={() => setShowConfirmModal(false)}

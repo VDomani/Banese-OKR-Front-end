@@ -1,5 +1,3 @@
-// src/components/ObjectiveColumn.js
-
 import React, { useState, useRef } from 'react';
 import './ObjectiveColumn.css';
 import AddObjectiveCard from './AddObjectiveCard';
@@ -23,28 +21,24 @@ function ObjectiveColumn({ tipo }) {
     setObjetivos(objetivos.filter((obj) => obj.id !== id));
   };
 
-  // Referência ao contêiner dos cards para controlar a rolagem
   const containerRef = useRef(null);
 
-  // Função para rolar para a esquerda
   const scrollLeft = () => {
     containerRef.current.scrollBy({
-      left: -300, // Ajuste o valor conforme necessário
+      left: -300, 
       behavior: 'smooth',
     });
   };
 
-  // Função para rolar para a direita
   const scrollRight = () => {
     containerRef.current.scrollBy({
-      left: 300, // Ajuste o valor conforme necessário
+      left: 300, 
       behavior: 'smooth',
     });
   };
 
   return (
     <div className="objective-column">
-      {/* Botão de seta para a esquerda */}
       {objetivos.length > 0 && (
         <button className="scroll-button left" onClick={scrollLeft}>
           <FaChevronLeft />
@@ -69,7 +63,6 @@ function ObjectiveColumn({ tipo }) {
         ))}
       </div>
 
-      {/* Botão de seta para a direita */}
       {objetivos.length > 0 && (
         <button className="scroll-button right" onClick={scrollRight}>
           <FaChevronRight />

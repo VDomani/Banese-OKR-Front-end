@@ -1,5 +1,3 @@
-// src/components/KRCard.js
-
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './KRCard.css';
@@ -11,31 +9,27 @@ function KRCard({ id, titulo, descricao, tipo, onEdit, onDelete }) {
   const [novoTitulo, setNovoTitulo] = useState(titulo);
   const [novaDescricao, setNovaDescricao] = useState(descricao);
 
-  // Função para editar o KR
   const handleEditKR = () => {
     const krEditado = {
       id,
       titulo: novoTitulo,
       descricao: novaDescricao,
-      tipo, // Incluímos o tipo ao editar
+      tipo, 
     };
     onEdit(id, krEditado);
     setShowModal(false);
   };
 
-  // Função para abrir o modal de confirmação de remoção
   const confirmDeleteKR = () => {
     setShowConfirmModal(true);
   };
 
-  // Função para confirmar a remoção
   const handleConfirmDelete = () => {
     onDelete(id);
     setShowModal(false);
     setShowConfirmModal(false);
   };
 
-  // Define o título a ser exibido
   const displayTitulo = novoTitulo || `KR ${tipo}`;
 
   return (
@@ -54,7 +48,6 @@ function KRCard({ id, titulo, descricao, tipo, onEdit, onDelete }) {
         <div className="kr-description">{novaDescricao}</div>
       </div>
 
-      {/* Modal de Edição */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Editar KR</Modal.Title>
@@ -97,7 +90,6 @@ function KRCard({ id, titulo, descricao, tipo, onEdit, onDelete }) {
         </Modal.Footer>
       </Modal>
 
-      {/* Modal de Confirmação de Remoção */}
       <Modal
         show={showConfirmModal}
         onHide={() => setShowConfirmModal(false)}

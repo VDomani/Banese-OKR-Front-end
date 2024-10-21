@@ -9,7 +9,7 @@ function AddObjectiveCard({ onAdd, tipo }) {
 
   const handleAddObjective = () => {
     const novoObjetivo = {
-      id: Date.now(), // ID único baseado no timestamp
+      id: Date.now(), 
       titulo: titulo || `Objetivo ${tipo}`,
       descricao,
     };

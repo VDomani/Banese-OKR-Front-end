@@ -1,5 +1,3 @@
-// src/components/AddKRCard.js
-
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './AddKRCard.css';
@@ -15,7 +13,7 @@ function AddKRCard({ onAdd, tipo }) {
       id: uuidv4(),
       titulo,
       descricao,
-      tipo, // Incluímos o tipo no objeto KR
+      tipo, 
     };
     onAdd(novoKR);
     setShowModal(false);
@@ -30,7 +28,6 @@ function AddKRCard({ onAdd, tipo }) {
         <span>Adicionar KR</span>
       </div>
 
-      {/* Modal de Adição */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Adicionar KR</Modal.Title>

@@ -1,5 +1,3 @@
-// src/components/Login.js
-
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -13,8 +11,6 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica de autenticação
-    // Por enquanto, vamos apenas redirecionar para a página de objetivos
     navigate('/objetivos');
   };
 

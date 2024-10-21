@@ -11,7 +11,6 @@ function ObjetivosPage() {
         <img src={logo} alt="Logo Banese" className="logo" />
       </div>
       <Container className="objetivos-content">
-        {/* Coluna de Objetivo Anual */}
         <div className="objective-section">
           <div className="section-header">
             <hr className="section-line" />
@@ -20,7 +19,6 @@ function ObjetivosPage() {
           <ObjectiveColumn tipo="Anual" />
         </div>
 
-        {/* Coluna de Objetivo Trimestral */}
         <div className="objective-section">
           <div className="section-header">
             <hr className="section-line" />

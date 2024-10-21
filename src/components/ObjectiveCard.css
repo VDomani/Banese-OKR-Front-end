@@ -1,7 +1,5 @@
-/* src/components/ObjectiveCard.css */
-
 .objective-card {
-  background-color: #67d69f; /* Cor verde clara */
+  background-color: #67d69f; 
   flex: 0 0 auto;
   width: 280px;
   height: 260px;
@@ -14,7 +12,7 @@
   align-items: center;
   text-align: center;
   color: #004D1A;
-  position: relative; /* Para posicionar o ícone de edição */
+  position: relative; 
   cursor: pointer;
 }
 
