@@ -1,4 +1,3 @@
-// src/components/TopBar.js
 
 import React, { useState } from 'react';
 import './TopBar.css';
@@ -12,7 +11,6 @@ function TopBar({ onSearch }) {
   const handleSearchIconClick = () => {
     setShowSearchInput(!showSearchInput);
     if (showSearchInput) {
-      // Se o campo de busca estava aberto, limpar a busca
       setSearchQuery('');
       onSearch('');
     }

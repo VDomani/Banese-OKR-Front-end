@@ -1,4 +1,3 @@
-// src/components/AtividadesPage.js
 
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -32,7 +31,6 @@ function AtividadesPage() {
     setAtividades(atividades.filter((atv) => atv.id !== id));
   };
 
-  // Filtrar atividades com base na busca
   const atividadesFiltradas = atividades.filter((atv) =>
     atv.titulo.toLowerCase().includes(searchQuery.toLowerCase()) ||
     atv.descricao.toLowerCase().includes(searchQuery.toLowerCase()) ||

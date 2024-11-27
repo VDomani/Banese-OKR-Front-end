@@ -1,4 +1,3 @@
-// src/components/AtividadeCard.js
 
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
@@ -74,7 +73,6 @@ function AtividadeCard({
         </div>
       </div>
 
-      {/* Modal de edição */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Editar Atividade</Modal.Title>
@@ -129,7 +127,6 @@ function AtividadeCard({
         </Modal.Footer>
       </Modal>
 
-      {/* Modal de confirmação de exclusão */}
       <Modal
         show={showConfirmModal}
         onHide={() => setShowConfirmModal(false)}

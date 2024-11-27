@@ -1,4 +1,3 @@
-// src/components/ObjectiveColumn.js
 
 import React, { useState } from 'react';
 import './ObjectiveColumn.css';
@@ -22,13 +21,12 @@ function ObjectiveColumn({ tipo, searchQuery, isExpanded }) {
     setObjetivos(objetivos.filter((obj) => obj.id !== id));
   };
 
-  // Filtrar objetivos com base na busca
   const objetivosFiltrados = objetivos.filter((obj) =>
     obj.titulo.toLowerCase().includes(searchQuery.toLowerCase()) ||
     obj.descricao.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Determinar quais objetivos serão mostrados na fileira fixa e quais serão mostrados abaixo
+
   const objetivosFixos = objetivosFiltrados.slice(0, 4);
   const objetivosExtras = objetivosFiltrados.slice(4);
 

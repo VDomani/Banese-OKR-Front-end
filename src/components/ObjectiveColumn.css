@@ -1,9 +1,8 @@
-/* src/components/ObjectiveColumn.css */
 
 .objective-column-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; 
 }
 
 .objective-grid-wrapper {
@@ -13,12 +12,12 @@
 }
 
 .objective-grid-wrapper.first-expanded {
-  margin-top: 20px; /* Ajuste este valor conforme necessário */
+  margin-top: 20px; 
 }
 
 .objective-grid {
   display: grid;
-  grid-template-columns: repeat(5, 280px); /* Cada card tem 280px de largura */
+  grid-template-columns: repeat(5, 280px); 
   gap: 20px;
 }
 

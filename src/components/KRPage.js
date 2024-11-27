@@ -1,4 +1,3 @@
-// src/components/KRPage.js
 
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -9,7 +8,7 @@ import TopBar from './TopBar';
 
 function KRPage() {
   const location = useLocation();
-  const { id, tipo, titulo } = location.state; // 'titulo' é o título do objetivo
+  const { id, tipo, titulo } = location.state;
 
   const [krs, setKRs] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');

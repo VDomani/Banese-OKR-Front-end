@@ -1,4 +1,3 @@
-/* src/components/KRPage.css */
 
 .kr-page {
   background-color: white;
@@ -45,7 +44,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  max-width: 1400px; /* Ajuste conforme necessário */
+  max-width: 1400px; 
 }
 
 .kr-grid > * {

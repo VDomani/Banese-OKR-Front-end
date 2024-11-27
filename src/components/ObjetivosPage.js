@@ -1,4 +1,3 @@
-// src/components/ObjetivosPage.js
 
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
@@ -20,7 +19,6 @@ function ObjetivosPage() {
     <div className="objetivos-container">
       <TopBar onSearch={handleSearch} />
       <Container className="objetivos-content">
-        {/* Objetivos Anuais */}
         <div className="objective-section">
           <div className="section-header">
             <hr className="section-line" />
@@ -39,7 +37,6 @@ function ObjetivosPage() {
           />
         </div>
 
-        {/* Objetivos Trimestrais */}
         <div className="objective-section">
           <div className="section-header">
             <hr className="section-line" />

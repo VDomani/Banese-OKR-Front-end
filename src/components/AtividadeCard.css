@@ -1,4 +1,3 @@
-/* src/components/AtividadeCard.css */
 
 .atividade-card {
     background-color: #67d69f;
@@ -35,7 +34,7 @@
   
   .atividade-responsavel,
   .atividade-data {
-    background-color: #337047; /* Novo fundo verde escuro */
+    background-color: #337047; 
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -55,7 +54,7 @@
   
   .atividade-descricao {
     margin-top: 10px;
-    background-color: white; /* Fundo branco na descrição */
+    background-color: white; 
     padding: 10px;
     border-radius: 5px;
   }
@@ -69,7 +68,7 @@
     margin-top: 5px;
     font-size: 14px;
     color: black;
-    word-wrap: break-word; /* Quebra de linha */
+    word-wrap: break-word; 
     word-break: break-word;
   }
   
