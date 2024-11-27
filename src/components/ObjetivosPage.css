@@ -1,71 +1,50 @@
+/* src/components/ObjetivosPage.css */
+
 .objetivos-container {
-    background-color: white;
-    min-height: 100vh;
-    padding-top: 60px;
-  }
-  
-  .top-bar {
-    background-color: #004D1A;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    height: 40px;
-  }
-  
-  .objective-section {
-    margin-top: 40px;
-  }
-  
-  .section-header {
-    position: relative;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .section-line {
-    border: none;
-    height: 2px;
-    background-color: #004D1A;
-    margin: 0;
-  }
-  
-  .section-title {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 0 10px;
-    color: #004D1A;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .objective-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-    margin-bottom: 30px;
-  }
+  background-color: white;
+  min-height: 100vh;
+  padding-top: 60px;
+}
 
-  .objetivos_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 60px);
-  }
+.objective-section {
+  margin-top: 40px;
+}
 
-  .objective-section {
-    margin-top: 40px;
-    width: 100%;
-  }
-  
+.section-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-line {
+  border: none;
+  height: 2px;
+  background-color: #004D1A;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.section-title {
+  background-color: white;
+  padding: 0 10px;
+  color: #004D1A;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.expand-icon {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #004D1A;
+  font-size: 24px;
+  cursor: pointer;
+}

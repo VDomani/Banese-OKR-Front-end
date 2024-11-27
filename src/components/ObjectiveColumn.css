@@ -1,62 +1,53 @@
-.objective-column {
-  position: relative;
+/* src/components/ObjectiveColumn.css */
+
+.objective-column-wrapper {
   display: flex;
-  align-items: center;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-.cards-container {
+.objective-grid-wrapper {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
 }
 
-.add-objective-container {
-  flex: 0 0 auto;
-  margin-right: 20px;
+.objective-grid-wrapper.first-expanded {
+  margin-top: 20px; /* Ajuste este valor conforme necessário */
 }
 
-.objective-cards-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+.objective-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 280px); /* Cada card tem 280px de largura */
   gap: 20px;
-  align-items: flex-start;
-  scrollbar-width: none; 
-  flex: 1;
 }
 
-.objective-cards-container::-webkit-scrollbar {
-  display: none; 
+.objective-grid > * {
+  width: 280px;
+  height: 260px;
 }
 
-.scroll-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent; 
-  border: none;
-  cursor: pointer;
-  z-index: 1;
-  padding: 0; 
-  width: 40px; 
-  height: 40px;
+/* Responsividade */
+@media (max-width: 1600px) {
+  .objective-grid {
+    grid-template-columns: repeat(4, 280px);
+  }
 }
 
-.scroll-button svg {
-  color: #004D1A; 
-  font-size: 28px; 
+@media (max-width: 1280px) {
+  .objective-grid {
+    grid-template-columns: repeat(3, 280px);
+  }
 }
 
-.scroll-button:hover svg {
-  color: #004D1A; 
+@media (max-width: 960px) {
+  .objective-grid {
+    grid-template-columns: repeat(2, 280px);
+  }
 }
 
-.scroll-button.left {
-  left: -25px; 
+@media (max-width: 640px) {
+  .objective-grid {
+    grid-template-columns: 280px;
+  }
 }
-
-.scroll-button.right {
-  right: -40px; 
-}
-

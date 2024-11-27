@@ -1,18 +1,15 @@
 .objective-card {
-  background-color: #67d69f; 
-  flex: 0 0 auto;
-  width: 280px;
+  background-color: #67d69f;
+  width: 100%;
   height: 260px;
   border-radius: 15px;
-  margin-right: 20px;
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
   color: #004D1A;
-  position: relative; 
+  position: relative;
   cursor: pointer;
 }
 

@@ -1,20 +1,19 @@
 .add-kr-card {
-    background-color: #004D1A;
-    color: white; 
-    height: 260px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .plus-symbol {
-    font-size: 70px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
+  background-color: #004D1A;
+  color: white; 
+  height: 260px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.plus-symbol {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

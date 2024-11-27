@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './KRCard.css';
 import { FaEdit } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-function KRCard({ id, titulo, descricao, tipo, onEdit, onDelete }) {
+function KRCard({ id, titulo, descricao, objetivoTitulo, onEdit, onDelete }) {
   const [showModal, setShowModal] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [novoTitulo, setNovoTitulo] = useState(titulo);
   const [novaDescricao, setNovaDescricao] = useState(descricao);
+
+  const navigate = useNavigate();
 
   const handleEditKR = () => {
     const krEditado = {
       id,
       titulo: novoTitulo,
       descricao: novaDescricao,
-      tipo, 
     };
     onEdit(id, krEditado);
     setShowModal(false);
@@ -30,11 +32,13 @@ function KRCard({ id, titulo, descricao, tipo, onEdit, onDelete }) {
     setShowConfirmModal(false);
   };
 
-  const displayTitulo = novoTitulo || `KR ${tipo}`;
+  const handleCardClick = () => {
+    navigate(`/krs/${id}`, { state: { id, titulo: novoTitulo } });
+  };
 
   return (
     <>
-      <div className="kr-card">
+      <div className="kr-card" onClick={handleCardClick}>
         <div
           className="edit-icon"
           onClick={(e) => {
@@ -44,8 +48,9 @@ function KRCard({ id, titulo, descricao, tipo, onEdit, onDelete }) {
         >
           <FaEdit />
         </div>
-        <div className="kr-title">{displayTitulo}</div>
-        <div className="kr-description">{novaDescricao}</div>
+        <div className="kr-card-objetivo-title">{objetivoTitulo}</div>
+        <div className="kr-card-title">{novoTitulo}</div>
+        <div className="kr-card-description">{novaDescricao}</div>
       </div>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>

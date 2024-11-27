@@ -1,0 +1,26 @@
+/* src/components/AddAtividadeCard.css */
+
+.add-atividade-card {
+    background-color: #004D1A;
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .add-atividade-card:hover {
+    background-color: #006837;
+  }
+  
+  .plus-symbol {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,43 @@
+/* src/components/AtividadesPage.css */
+
+.atividades-page {
+    background-color: white;
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+  
+  .atividades-content {
+    padding: 20px;
+  }
+  
+  .atividades-info {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .divider {
+    border: none;
+    height: 2px;
+    background-color: #004D1A;
+    margin: 0;
+  }
+  
+  .atividades-title {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    color: #004D1A;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .atividades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  

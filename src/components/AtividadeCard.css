@@ -1,0 +1,75 @@
+/* src/components/AtividadeCard.css */
+
+.atividade-card {
+    background-color: #67d69f;
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .atividade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .atividade-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .atividade-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .edit-icon {
+    color: #004D1A;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .atividade-responsavel,
+  .atividade-data {
+    background-color: #337047; /* Novo fundo verde escuro */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .info-value {
+    font-size: 14px;
+  }
+  
+  .atividade-descricao {
+    margin-top: 10px;
+    background-color: white; /* Fundo branco na descrição */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .atividade-descricao-label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .atividade-descricao-texto {
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+    word-wrap: break-word; /* Quebra de linha */
+    word-break: break-word;
+  }
+  

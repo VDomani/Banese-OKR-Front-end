@@ -1,30 +1,61 @@
-import React from 'react';
+// src/components/ObjetivosPage.js
+
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import './ObjetivosPage.css';
-import logo from '../assets/images/logo.png';
 import ObjectiveColumn from './ObjectiveColumn';
+import TopBar from './TopBar';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 function ObjetivosPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isExpandedAnual, setIsExpandedAnual] = useState(false);
+  const [isExpandedTrimestral, setIsExpandedTrimestral] = useState(false);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <div className="objetivos-container">
-      <div className="top-bar">
-        <img src={logo} alt="Logo Banese" className="logo" />
-      </div>
+      <TopBar onSearch={handleSearch} />
       <Container className="objetivos-content">
+        {/* Objetivos Anuais */}
         <div className="objective-section">
           <div className="section-header">
             <hr className="section-line" />
             <h3 className="section-title">Objetivo Anual</h3>
+            <div
+              className="expand-icon"
+              onClick={() => setIsExpandedAnual(!isExpandedAnual)}
+            >
+              {isExpandedAnual ? <FaChevronUp /> : <FaChevronDown />}
+            </div>
           </div>
-          <ObjectiveColumn tipo="Anual" />
+          <ObjectiveColumn
+            tipo="Anual"
+            searchQuery={searchQuery}
+            isExpanded={isExpandedAnual}
+          />
         </div>
 
+        {/* Objetivos Trimestrais */}
         <div className="objective-section">
           <div className="section-header">
             <hr className="section-line" />
             <h3 className="section-title">Objetivo Trimestral</h3>
+            <div
+              className="expand-icon"
+              onClick={() => setIsExpandedTrimestral(!isExpandedTrimestral)}
+            >
+              {isExpandedTrimestral ? <FaChevronUp /> : <FaChevronDown />}
+            </div>
           </div>
-          <ObjectiveColumn tipo="Trimestral" />
+          <ObjectiveColumn
+            tipo="Trimestral"
+            searchQuery={searchQuery}
+            isExpanded={isExpandedTrimestral}
+          />
         </div>
       </Container>
     </div>
